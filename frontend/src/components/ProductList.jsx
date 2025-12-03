@@ -1,13 +1,27 @@
 // src/components/ProductList.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { initialProducts, categories } from "../data/mockProducts";
 import ProductTable from "./ProductTable";
 import ProductSummary from "./ProductSummary";
 import ProductForm from "./ProductForm";
 
 export default function ProductList() {
-  const [products, setProducts] = useState(initialProducts);
+  const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("ทั้งหมด");
+
+  const fetchProducts = async () => {
+    try {
+      const res = await fetch("http://localhost:8080/api/products");
+      const data = await res.json();
+      setProducts(data);
+    } catch (err) {
+      console.error("Failed to fetch products", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   const filteredProducts =
     selectedCategory === "ทั้งหมด"
