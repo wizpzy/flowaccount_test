@@ -1,0 +1,107 @@
+/* src/styles.css */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.product-table thead {
+  background-color: #9be7a1; /* green-ish header */
+}
+
+.row-out-of-stock {
+  background-color: #ffe5e5; /* light red */
+}
+
+.stock-low {
+  color: red;
+  font-weight: bold;
+}
+
+.filter-bar {
+  margin-bottom: 12px;
+}
+
+.summary {
+  margin: 12px 0 24px;
+  padding: 10px;
+  background: #f3f3f3;
+  border-radius: 6px;
+}
+
+.product-form {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.product-form h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #2e7d32;
+  color: white;
+}
+
+button:disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 4px;
+  color: #d32f2f;
+  font-size: 0.85rem;
+}
